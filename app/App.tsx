@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import './global.css';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -76,6 +78,16 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Section title="Tailwind">
+            is TailwindCSS setup: <div className="w-10 h-10 bg-red-500" />
+            <br />
+            is React Native Web setup:{' '}
+            <View style={{$$css: true, test: 'w-10 h-10 bg-blue-500'}} />
+            <br />
+            Is JSX runtime set to automatic dn jsxImportSource set to
+            'nativewind':
+            <View className="w-10 h-10 bg-blue-500" />
+          </Section>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.

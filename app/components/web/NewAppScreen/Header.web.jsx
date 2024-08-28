@@ -11,7 +11,7 @@
 import Colors from './Colors.web';
 import {Text, StyleSheet, ImageBackground} from 'react-native';
 import React from 'react';
-import logo from './logo.png'
+import logo from './logo.png';
 
 const Header = () => (
   <ImageBackground

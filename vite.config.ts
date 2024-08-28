@@ -23,7 +23,12 @@ const development = process.env.NODE_ENV === 'development';
 // https://vitejs.dev/config/
 export default defineConfig({
   clearScreen: true,
-  plugins: [react()],
+  plugins: [
+    react({
+      jsxRuntime: 'automatic',
+      jsxImportSource: 'nativewind',
+    }),
+  ],
   define: {
     // https://github.com/bevacqua/dragula/issues/602#issuecomment-1296313369
     global: 'window',

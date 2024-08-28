@@ -7,15 +7,8 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
+import {SafeAreaView, ScrollView, StatusBar, Text, View} from 'react-native';
+import {useColorScheme} from 'nativewind';
 import {
   Colors,
   DebugInstructions,
@@ -24,14 +17,11 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import './global.css';
-
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
 function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
   return (
     <View className="mt-8 pl-6 pr-6">
       <Text className="text-2xl font-semibold dark:text-white text-black">
@@ -45,7 +35,8 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 }
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  const {colorScheme} = useColorScheme();
+  const isDarkMode = colorScheme === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -63,9 +54,9 @@ function App(): React.JSX.Element {
         <Header />
         <View className="dark:bg-black bg-white">
           <Section title="Nativewind">
-            blue square:
-            <View className="w-10 h-10 bg-blue-500" />
+            <Text>blue square:</Text>
           </Section>
+          <View className="w-10 h-10 bg-blue-500" />
           <Section title="Step One">
             Edit <Text className="font-bold">App.tsx</Text> to change this
             screen and then come back to see your edits.

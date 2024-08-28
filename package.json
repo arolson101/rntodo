@@ -8,14 +8,16 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "web": "vite"
+    "web": "vite",
+    "windows": "react-native run-windows"
   },
   "dependencies": {
     "react": "18.3.1",
     "react-dom": "^18.3.1",
     "react-native": "0.75.2",
     "react-native-reanimated": "^3.15.0",
-    "react-native-web": "^0.19.12"
+    "react-native-web": "^0.19.12",
+    "react-native-windows": "^0.75.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -39,7 +41,8 @@
     "react-test-renderer": "18.3.1",
     "tailwindcss": "^3.4.10",
     "typescript": "5.0.4",
-    "vite": "^5.4.2"
+    "vite": "^5.4.2",
+    "metro-config": "^0.80.10"
   },
   "engines": {
     "node": ">=18"

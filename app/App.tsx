@@ -16,7 +16,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { Button } from '~/components/ui/button';
+import {Button} from '~/components/ui/button';
+
+import './global.css';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -54,7 +56,9 @@ function App(): React.JSX.Element {
         style={backgroundStyle}>
         <Header />
         <View className="dark:bg-black bg-white">
-          <Button variant='outline'><Text>button2</Text></Button>
+          <Button className='bg-primary'>
+            <Text>button2</Text>
+          </Button>
           <Section title="Nativewind">
             <Text>blue square:</Text>
           </Section>

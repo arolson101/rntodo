@@ -1,7 +1,7 @@
 // https://stereobooster.com/posts/react-native-web-with-vite/#final-config
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
-// import { esbuildFlowPlugin } from "@bunchtogether/vite-plugin-flow";
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://tamagui.dev/docs/intro/installation
 const extensions = [
@@ -24,6 +24,7 @@ const development = process.env.NODE_ENV === 'development';
 export default defineConfig({
   clearScreen: true,
   plugins: [
+    tsconfigPaths(),
     react({
       jsxRuntime: 'automatic',
       jsxImportSource: 'nativewind',
@@ -54,11 +55,6 @@ export default defineConfig({
       jsx: 'automatic',
       // need either this or the plugin below
       loader: {'.js': 'jsx'},
-      // plugins: [
-      //   esbuildFlowPlugin(/\.(flow|jsx?)$/, (path) =>
-      //     /\.jsx$/.test(path) ? "jsx" : "jsx"
-      //   ),
-      // ],
     },
   },
 });

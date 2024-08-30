@@ -1,6 +1,13 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
+    /* path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"],
+      "~shared/*": ["./shared/*"],
+      "~server/*": ["./server/*"]
+    },
     "lib": ["DOM"]
   }
 }

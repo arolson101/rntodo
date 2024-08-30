@@ -54,7 +54,7 @@ function App(): React.JSX.Element {
         style={backgroundStyle}>
         <Header />
         <View className="dark:bg-black bg-white">
-          <Button>button</Button>
+          <Button variant='outline'><Text>button2</Text></Button>
           <Section title="Nativewind">
             <Text>blue square:</Text>
           </Section>

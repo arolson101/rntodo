@@ -19,7 +19,7 @@ const Header = () => (
     source={logo}
     style={styles.background}
     imageStyle={styles.logo}>
-    <Text style={styles.text}>Welcome to React</Text>
+    <Text style={styles.text}>Welcome to React Native Web</Text>
   </ImageBackground>
 );
 
